@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+var secret = require('./secret.json');
+
 client.once('ready', () => {
   console.log('Deadlands bot Loaded!');
 });
@@ -230,4 +232,4 @@ client.on('message', message => {
   } 
 });
 
-client.login('NjIzODc5NzEwNTA5NzYwNTQ1.XYI4CQ.gm7gFACFcGMI4yu2jhfW4k_bZhc');
+client.login(secret['secret']);
