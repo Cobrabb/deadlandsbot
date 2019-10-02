@@ -108,7 +108,7 @@ function fireShotgun(skill, incriment, range){
 }
 
 function fireFist(skill, tn, damage){
-  var tncalc = 5 - tn;
+  var tncalc = 5 - parseRoll(tn);
   var operand = tncalc < 0 ? '' : '+'; 
 
   fire(skill + operand + tncalc, 1, 0, damage, true);
